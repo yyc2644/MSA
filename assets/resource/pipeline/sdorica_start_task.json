@@ -1,0 +1,41 @@
+{
+    "点击开始": {
+        "recognition": "TemplateMatch",
+        "template": "fuhun.png",
+        "action": "Click"
+    },
+    "白嫖": {
+        "recognition": "TemplateMatch",
+        "template": "free.png",
+        "action": "Click",
+        "next": "确认"
+    },
+    "确认": {
+        "recognition": "TemplateMatch",
+        "template": "check.png",
+        "action": "Click"
+        },
+    "StartGameApp": {
+        "action": {
+            "type": "StartApp",
+            "param": {
+                "package": "com.ilongyuan.sdorica.longyuan/com.privacy.dialog.PrivacyActivity"
+            }
+        },
+        "next": [
+            "DisableStart"
+        ]
+    },
+    "DisableStart": {
+            "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "DisableNode",
+                "custom_action_param": {
+                    "node_name": "StartGameApp"
+                }
+            }
+        }
+    }
+
+}

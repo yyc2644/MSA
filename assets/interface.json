@@ -1,4 +1,6 @@
 {
+    "name": "MSA",
+
     "controller": [
         {
             "name": "安卓端",
